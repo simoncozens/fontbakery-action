@@ -18,6 +18,18 @@ jobs:
         - uses: simoncozens/fontbakery-action
 ```
 
+If you want to save the reports created by fontbakery as artifacts to be downloaded from the GitHub actions page, add the following step:
+
+```
+        - uses: actions/upload-artifact@v2
+          if: always()
+          with:
+            name: Fontbakery reports
+            path: fontbakery.*
+```
+
+(The `if: always()` ensures that the reports are uploaded even if fontbakery exits with a failure status.)
+
 ## Inputs
 
 You can further customise the action using the following inputs:
