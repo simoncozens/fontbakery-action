@@ -29,3 +29,7 @@ A list of directories to inspect for font files. Default: `.` (the root of the r
 ### `profile`
 
 The fontbakery profile to check. Default: `googlefonts`.
+
+### `output_formats`
+
+The output files to produce. Default: `md,html`. If this string contains `md`, a Markdown report is saved in the file `fontbakery.md`; if it contains `html`, a HTML report is saved in the file `fontbakery.html`.

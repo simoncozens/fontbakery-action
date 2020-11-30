@@ -8,6 +8,9 @@ inputs:
   profile:
     description: 'Fontbakery profile to use'
     default: 'googlefonts'
+  output_formats:
+    description: 'Output formats'
+    default: 'md,html'
 
 runs:
   using: 'docker'
@@ -15,3 +18,4 @@ runs:
   args:
     - ${{ inputs.directories }}
     - ${{ inputs.profile }}
+    - ${{ inputs.output_formats }}
