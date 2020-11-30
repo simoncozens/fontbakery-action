@@ -6,13 +6,13 @@ OUTPUTS=""
 
 case "$OUTPUTFORMATS" in
   *md*)
-    $OUTPUTS="--ghmarkdown fontbakery.md"
+    OUTPUTS="--ghmarkdown fontbakery.md"
     ;;
 esac
 
 case "$OUTPUTFORMATS" in
   *md*)
-    $OUTPUTS="$OUTPUTS --html fontbakery.html"
+    OUTPUTS="$OUTPUTS --html fontbakery.html"
     ;;
 esac
 
