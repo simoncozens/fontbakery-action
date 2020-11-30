@@ -1,0 +1,17 @@
+# action.yml
+name: 'Fontbakery'
+description: 'Test fonts with the fontbakery QA tool'
+inputs:
+  directories:
+    description: 'Directories containing fonts to check'
+    default: '.'
+  profile:
+    description: 'Fontbakery profile to use'
+    default: 'googlefonts'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.directories }}
+    - ${{ inputs.profile }}
